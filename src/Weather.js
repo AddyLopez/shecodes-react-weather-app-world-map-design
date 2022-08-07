@@ -1,18 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
+import MonthDateYear from "./MonthDateYear";
+import WeekdayAndTime from "./WeekdayAndTime";
 import "./Weather.css";
 
 export default function Weather(props) {
-  // const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response);
-    // setTemperature(response.data.main.temp);
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Saturday 17:09",
+      // date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
@@ -41,7 +40,12 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <MonthDateYear />
+          </li>
+          <li>
+            <WeekdayAndTime />
+          </li>
           <li>{weatherData.description}</li>
         </ul>
         <div className="main-display">
