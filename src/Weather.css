@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+.Weather li {
+  font-size: 18px;
+}
+
 .Weather img {
   height: 65px;
   width: 65px;
@@ -31,6 +35,7 @@
 .Weather div.main-temperature-display {
   display: flex;
   color: hsl(0, 0%, 0%);
+  padding-right: 50px;
 }
 
 .Weather span.main-temperature {
