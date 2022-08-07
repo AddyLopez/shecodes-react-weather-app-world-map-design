@@ -7,7 +7,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>React Weather Application (Version: Google Design)</h1>
         <Weather />
         <footer>
           <a
@@ -27,7 +26,6 @@ export default function App() {
           >
             Addy López
           </a>
-          .
         </footer>
       </div>
     </div>

@@ -1,0 +1,20 @@
+.App {
+  min-width: 375px;
+  max-width: 650px;
+}
+
+.App footer {
+  margin-top: 8px;
+  text-align: right;
+  font-family: "Red Hat Mono", monospace;
+  font-size: 16px;
+}
+.App a {
+  text-decoration: none;
+}
+.App a:hover {
+  text-decoration: underline;
+}
+.App a:active {
+  font-weight: bold;
+}
