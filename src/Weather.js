@@ -12,7 +12,7 @@ export default function Weather(props) {
       ready: true,
       city: response.data.name,
       // date: new Date(response.data.dt * 1000),
-      description: response.data.weather[0].description,
+      description: response.data.weather[0].description.toUpperCase(),
       humidity: response.data.main.humidity,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       temperature: response.data.main.temp,
@@ -46,15 +46,17 @@ export default function Weather(props) {
           <li>
             <WeekdayAndTime />
           </li>
-          <li>{weatherData.description}</li>
         </ul>
         <div className="main-display">
-          <div className=" main-temperature-display">
-            <img src={weatherData.iconUrl} alt={weatherData.description} />
-            <span className="main-temperature">
-              {Math.round(weatherData.temperature)}
-            </span>
-            <span className="main-temperature-units">°C</span>
+          <div className=" main-temperature-display-container">
+            <div className="main-temperature-display">
+              <img src={weatherData.iconUrl} alt={weatherData.description} />
+              <span className="main-temperature">
+                {Math.round(weatherData.temperature)}
+              </span>
+              <span className="main-temperature-units">°C</span>
+            </div>
+            <div className="description">{weatherData.description}</div>
           </div>
           <div className="secondary-data">
             <ul>
