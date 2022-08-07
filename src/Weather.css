@@ -50,9 +50,9 @@
 .Weather div.secondary-data {
   margin-left: 26px;
 }
-.Weather div..col-9 {
+.Weather div.col-9 {
   padding-right: 0;
 }
-.Weather div..col-3 {
+.Weather div.col-3 {
   padding-right: 10px;
 }

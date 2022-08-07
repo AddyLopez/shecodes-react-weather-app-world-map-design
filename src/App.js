@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Albuquerque" />
         <footer>
           <a
             href="https://github.com/AddyLopez/shecodes-react-weather-app-google-dashboard-design"
