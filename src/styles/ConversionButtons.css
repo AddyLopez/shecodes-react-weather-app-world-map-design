@@ -9,6 +9,7 @@
 }
 .ConversionButtons .btn:hover {
   background-color: hsl(13deg 94% 45%);
+  border-color: hsl(13deg 94% 45%);
 }
 .ConversionButtons .btn:active {
   background-color: hsl(13deg 94% 45%);
