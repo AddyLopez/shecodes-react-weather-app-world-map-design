@@ -2,6 +2,22 @@
   display: inline-flex;
   padding: 0 0 0 10px;
 }
+.ConversionButtons .btn {
+  background-color: hsl(32deg 97% 56%);
+  border: 1px solid hsl(32deg 97% 56%);
+  box-shadow: 1px 1px 1px hsl(32deg 97% 36%);
+}
+.ConversionButtons .btn:hover {
+  background-color: hsl(13deg 94% 45%);
+}
+.ConversionButtons .btn:active {
+  background-color: hsl(13deg 94% 45%);
+}
+.ConversionButtons .btn:focus {
+  background-color: hsl(13deg 94% 45%);
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem hsl(13deg 94% 70%);
+  border-color: hsl(13deg 94% 45%);
+}
 @media only screen and (max-width: 476px) {
   .ConversionButtons {
     padding: 0;
