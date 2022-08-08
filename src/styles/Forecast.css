@@ -1,0 +1,13 @@
+.Forecast {
+  text-align: center;
+  margin-top: 20px;
+}
+.Forecast canvas {
+  margin: 6px 0 2px 0;
+}
+.Forecast div.weekday {
+  color: hsl(0, 0%, 35%);
+}
+.Forecast span.max-temp {
+  color: hsl(0, 0%, 35%);
+}

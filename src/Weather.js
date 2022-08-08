@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import ConversionButtons from "./ConversionButtons";
+import Forecast from "./Forecast";
 import "./styles/Weather.css";
 
 export default function Weather(props) {
@@ -53,6 +54,7 @@ export default function Weather(props) {
           <ConversionButtons data={weatherData} />
         </form>
         <WeatherInfo data={weatherData} />
+        <Forecast />
       </div>
     );
   } else {
