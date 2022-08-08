@@ -1,0 +1,50 @@
+.WeatherInfo h1 {
+  color: hsl(0, 0%, 35%);
+  font-size: 28px;
+  margin-bottom: 0;
+}
+.WeatherInfo ul {
+  list-style: none;
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.WeatherInfo li {
+  font-size: 16px;
+}
+
+.WeatherInfo .main-display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.WeatherInfo div.main-temperature-display-container {
+  display: flex;
+  color: hsl(0, 0%, 35%);
+  padding-right: 35px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WeatherInfo div.main-temperature-display {
+  display: flex;
+}
+
+.Weather span.main-temperature {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.Weather span.main-temperature-units {
+  font-size: 20px;
+}
+.Weather div.description {
+  font-size: 16px;
+}
+.Weather div.secondary-data {
+  padding-left: 35px;
+  line-height: 1.5;
+  border-left: 1px dotted hsl(0, 0%, 88%);
+}

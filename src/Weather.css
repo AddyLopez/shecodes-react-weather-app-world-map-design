@@ -3,7 +3,7 @@
   border-radius: 4px;
   box-shadow: 1px 1px 1px hsl(0, 0%, 35%);
   color: hsl(0, 0%, 45%);
-  padding: 28px 54px 16px 32px;
+  padding: 35px 35px 23px 35px;
 }
 .Weather form {
   margin-bottom: 16px;
@@ -12,66 +12,6 @@
   background-color: hsl(207deg 100% 60%);
   border: 1px solid hsl(207deg 100% 60%);
   box-shadow: 1px 1px 1px hsl(207deg 100% 40%);
-}
-.Weather h1 {
-  color: hsl(0, 0%, 35%);
-  font-size: 28px;
-  margin-bottom: 0;
-}
-.Weather ul {
-  list-style: none;
-  margin-bottom: 4px;
-  padding: 0;
-}
-
-.Weather li {
-  font-size: 16px;
-}
-
-.Weather .secondary-data li {
-  font-size: 18px;
-}
-.Weather img {
-  height: 65px;
-  width: 65px;
-  border-radius: 35px;
-  border: 5px solid hsla(207deg 90% 64% / 50%);
-  background-color: hsla(207deg 90% 54% / 50%);
-  margin-right: 6px;
-}
-.Weather .main-display {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.Weather div.main-temperature-display-container {
-  display: flex;
-  color: hsl(0, 0%, 35%);
-  padding-right: 50px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Weather div.main-temperature-display {
-  display: flex;
-}
-
-.Weather span.main-temperature {
-  font-size: 60px;
-  line-height: 1;
-}
-
-.Weather span.main-temperature-units {
-  font-size: 20px;
-}
-.Weather div.description {
-  font-size: 18px;
-}
-.Weather div.secondary-data {
-  margin-left: 26px;
-  line-height: 1.8;
 }
 .Weather div.col-9 {
   padding-right: 0;
