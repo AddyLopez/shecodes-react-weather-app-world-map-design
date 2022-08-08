@@ -36,7 +36,7 @@ export default function WeekdayAndTime() {
     if (hour === 12) {
       return (
         <div className="WeekdayAndTime">
-          {day} {hour}:{minutes} {postMeridiem};
+          {day} {hour}:{minutes} {postMeridiem}
         </div>
       );
     } else {
@@ -44,7 +44,7 @@ export default function WeekdayAndTime() {
         let afternoon = hour - 12;
         return (
           <div className="WeekdayAndTime">
-            {day} {afternoon}:{minutes} {postMeridiem};
+            {day} {afternoon}:{minutes} {postMeridiem}
           </div>
         );
       }
