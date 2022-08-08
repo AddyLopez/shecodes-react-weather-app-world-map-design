@@ -1,8 +1,6 @@
 import React from "react";
-import "./MonthDateYear.css";
 
 export default function MonthDateYear() {
-  // Format date:
   let dateToday = new Date();
   let months = [
     "January",

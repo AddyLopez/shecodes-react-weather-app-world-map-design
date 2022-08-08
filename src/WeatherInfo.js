@@ -4,7 +4,7 @@ import WeekdayAndTime from "./WeekdayAndTime";
 import WeatherIcon from "./WeatherIcon";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
-import "./WeatherInfo.css";
+import "./styles/WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -25,14 +25,14 @@ export default function WeatherInfo(props) {
             <span className="main-temperature">
               {Math.round(props.data.temperature)}
             </span>
-            <span className="main-temperature-units">°C</span>
+            <span className="main-temperature-units">°F</span>
           </div>
           <div className="description">{props.data.description}</div>
         </div>
         <div className="secondary-data">
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind Speed: {props.data.wind} km/h</li>
+            <li>Wind Speed: {props.data.wind} mph</li>
             <li>
               Sunrise: <Sunrise code={props.data.sunrise} />
             </li>

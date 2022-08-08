@@ -1,8 +1,6 @@
 import React from "react";
-import "./WeekdayAndTime.css";
 
 export default function WeekdayAndTime() {
-  // Format weekday and time:
   let currentDate = new Date();
   let days = [
     "Sunday",
