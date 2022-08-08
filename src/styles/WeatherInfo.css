@@ -32,19 +32,29 @@
   display: flex;
 }
 
-.Weather span.main-temperature {
+.WeatherInfo span.main-temperature {
   font-size: 60px;
   line-height: 1;
 }
 
-.Weather span.main-temperature-units {
+.WeatherInfo span.main-temperature-units {
   font-size: 20px;
 }
-.Weather div.description {
+.WeatherInfo div.description {
   font-size: 16px;
 }
-.Weather div.secondary-data {
+.WeatherInfo div.secondary-data {
   padding-left: 35px;
   line-height: 1.5;
   border-left: 1px dotted hsl(0, 0%, 88%);
+}
+@media only screen and (max-width: 476px) {
+  .WeatherInfo div.main-temperature-display-container {
+    padding-right: 12px;
+  }
+  .WeatherInfo div.secondary-data {
+    padding-left: 0;
+    line-height: 1.5;
+    border: none;
+  }
 }

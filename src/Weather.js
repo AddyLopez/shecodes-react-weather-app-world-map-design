@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import ConversionButtons from "./ConversionButtons";
 import "./styles/Weather.css";
 
 export default function Weather(props) {
@@ -18,7 +19,7 @@ export default function Weather(props) {
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
       temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
     });
   }
 
@@ -41,20 +42,15 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="Enter the name of a city..."
-                className="form-control"
-                autoFocus="on"
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-3">
-              <input type="submit" value="Search" className="btn btn-primary" />
-            </div>
-          </div>
+          <input
+            type="search"
+            placeholder="Enter the name of a city..."
+            className="form-control"
+            autoFocus="on"
+            onChange={handleCityChange}
+          />
+          <input type="submit" value="Search" className="btn btn-primary" />
+          <ConversionButtons data={weatherData} />
         </form>
         <WeatherInfo data={weatherData} />
       </div>

@@ -21,7 +21,7 @@ export default function MonthDateYear() {
   let year = dateToday.getFullYear();
 
   return (
-    <div className="Date">
+    <div className="MonthDateYear">
       {month} {date}, {year}
     </div>
   );

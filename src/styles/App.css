@@ -19,3 +19,8 @@
 .App a:active {
   font-weight: bold;
 }
+@media only screen and (max-width: 476px) {
+  footer {
+    text-align: center !important;
+  }
+}
