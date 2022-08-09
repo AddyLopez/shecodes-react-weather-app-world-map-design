@@ -10,10 +10,10 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       description: response.data.weather[0].description.toUpperCase(),
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
@@ -54,7 +54,7 @@ export default function Weather(props) {
           <ConversionButtons data={weatherData} />
         </form>
         <WeatherInfo data={weatherData} />
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
