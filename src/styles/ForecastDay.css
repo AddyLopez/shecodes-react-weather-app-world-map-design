@@ -1,3 +1,14 @@
 .ForecastDay {
+  text-align: center;
+  padding: 9px;
+}
+.ForecastDay .forecast-weekday {
+  color: hsl(0, 0%, 35%);
+}
+.ForecastDay canvas {
+  margin: 6px 0 2px 0;
+}
+
+.ForecastDay span.max-temp {
   color: hsl(0, 0%, 35%);
 }

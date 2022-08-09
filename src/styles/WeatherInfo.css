@@ -15,7 +15,7 @@
 
 .WeatherInfo .main-display {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 16px;
 }
