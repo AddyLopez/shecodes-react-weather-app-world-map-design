@@ -25,6 +25,7 @@ export default function Weather(props) {
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
       temperature: response.data.main.temp,
+      timezoneOffset: response.data.timezone,
       wind: Math.round(response.data.wind.speed),
     });
   }

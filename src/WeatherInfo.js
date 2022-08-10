@@ -56,10 +56,18 @@ export default function WeatherInfo(props) {
               Wind Speed: {evaluateWindSpeed()} {props.units.windSpeedUnits}
             </li>
             <li>
-              Sunrise: <Sunrise code={props.data.sunrise} />
+              Sunrise:{" "}
+              <Sunrise
+                sunrise={props.data.sunrise}
+                timezoneOffset={props.data.timezoneOffset}
+              />
             </li>
             <li>
-              Sunset: <Sunset code={props.data.sunset} />
+              Sunset:{" "}
+              <Sunset
+                sunset={props.data.sunset}
+                timezoneOffset={props.data.timezoneOffset}
+              />
             </li>
           </ul>
         </div>

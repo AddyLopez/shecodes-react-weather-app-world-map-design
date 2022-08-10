@@ -1,6 +1,6 @@
 .ForecastDay {
   text-align: center;
-  padding: 9px;
+  padding: 8px;
 }
 .ForecastDay .forecast-weekday {
   color: hsl(0, 0%, 35%);
