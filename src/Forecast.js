@@ -35,10 +35,10 @@ export default function Forecast(props) {
     );
   } else {
     let apiKey = "59446b2366c35cbe45d81fb3e3545297";
-    let units = "imperial";
+    let apiUnits = "imperial";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`;
 
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";

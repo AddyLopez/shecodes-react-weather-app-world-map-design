@@ -1,13 +1,16 @@
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import ConversionButtons from "./ConversionButtons";
 import Forecast from "./Forecast";
 import "./styles/Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [displayUnits, setDisplayUnits] = useState({
+    tempUnits: "°F",
+    windSpeedUnits: "mph",
+  });
 
   function handleResponse(response) {
     setWeatherData({
@@ -27,8 +30,8 @@ export default function Weather(props) {
   function search() {
     // make API call with city
     const apiKey = "59446b2366c35cbe45d81fb3e3545297";
-    let units = "imperial";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUnits = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${apiUnits}`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
@@ -37,6 +40,21 @@ export default function Weather(props) {
   }
   function handleCityChange(event) {
     setCity(event.target.value);
+  }
+  function assignImperialUnits() {
+    setDisplayUnits({
+      tempUnits: "°F",
+      windSpeedUnits: "mph",
+    });
+    console.log(displayUnits);
+  }
+
+  function assignMetricUnits() {
+    setDisplayUnits({
+      tempUnits: "°C",
+      windSpeedUnits: "km/h",
+    });
+    console.log(displayUnits);
   }
 
   if (weatherData.ready) {
@@ -51,10 +69,25 @@ export default function Weather(props) {
             onChange={handleCityChange}
           />
           <input type="submit" value="Search" className="btn btn-primary" />
-          <ConversionButtons data={weatherData} />
+          <div className="conversion-buttons">
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={assignImperialUnits}
+            >
+              °F
+            </button>
+            <button
+              type="button"
+              className="btn btn-success ms-2"
+              onClick={assignMetricUnits}
+            >
+              °C
+            </button>
+          </div>
         </form>
-        <WeatherInfo data={weatherData} />
-        <Forecast coordinates={weatherData.coordinates} />
+        <WeatherInfo data={weatherData} units={displayUnits} />
+        <Forecast coordinates={weatherData.coordinates} units={displayUnits} />
       </div>
     );
   } else {

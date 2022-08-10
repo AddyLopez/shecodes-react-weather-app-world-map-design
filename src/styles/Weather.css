@@ -19,6 +19,28 @@
   border: 1px solid hsl(207deg 100% 60%);
   box-shadow: 1px 1px 1px hsl(207deg 100% 40%);
 }
+.conversion-buttons {
+  display: inline-flex;
+  padding: 0 0 0 10px;
+}
+.conversion-buttons .btn {
+  background-color: hsl(32deg 97% 56%);
+  border: 1px solid hsl(32deg 97% 56%);
+  box-shadow: 1px 1px 1px hsl(32deg 97% 36%);
+}
+.conversion-buttons .btn:hover {
+  background-color: hsl(13deg 94% 45%);
+  border-color: hsl(13deg 94% 45%);
+}
+.conversion-buttons .btn:active {
+  background-color: hsl(13deg 94% 45%);
+}
+.conversion-buttons .btn:focus {
+  background-color: hsl(13deg 94% 45%);
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem hsl(13deg 94% 70%);
+  border-color: hsl(13deg 94% 45%);
+}
+
 @media only screen and (max-width: 476px) {
   .Weather {
     padding: 35px 10px 35px 10px;
@@ -26,5 +48,8 @@
 
   .Weather input.btn {
     display: none;
+  }
+  .conversion-buttons {
+    padding: 0;
   }
 }

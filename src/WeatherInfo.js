@@ -7,6 +7,24 @@ import Sunset from "./Sunset";
 import "./styles/WeatherInfo.css";
 
 export default function WeatherInfo(props) {
+  function evaluateTemperature() {
+    let temperature = "";
+    if (props.units.tempUnits === "°F") {
+      temperature = Math.round(props.data.temperature);
+    } else if (props.units.tempUnits === "°C") {
+      temperature = Math.round(((props.data.temperature - 32) * 5) / 9);
+    }
+    return temperature;
+  }
+  function evaluateWindSpeed() {
+    let windSpeed = "";
+    if (props.units.windSpeedUnits === "mph") {
+      windSpeed = Math.round(props.data.wind);
+    } else if (props.units.windSpeedUnits === "km/h") {
+      windSpeed = Math.round(props.data.wind * 1.609344);
+    }
+    return windSpeed;
+  }
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
@@ -22,17 +40,19 @@ export default function WeatherInfo(props) {
         <div className=" main-temperature-display-container">
           <div className="main-temperature-display">
             <WeatherIcon code={props.data.icon} size={64} />
-            <span className="main-temperature">
-              {Math.round(props.data.temperature)}
+            <span className="main-temperature">{evaluateTemperature()}</span>
+            <span className="main-temperature-units">
+              {props.units.tempUnits}
             </span>
-            <span className="main-temperature-units">°F</span>
           </div>
           <div className="description">{props.data.description}</div>
         </div>
         <div className="secondary-data">
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind Speed: {props.data.wind} mph</li>
+            <li>
+              Wind Speed: {evaluateWindSpeed()} {props.units.windSpeedUnits}
+            </li>
             <li>
               Sunrise: <Sunrise code={props.data.sunrise} />
             </li>
