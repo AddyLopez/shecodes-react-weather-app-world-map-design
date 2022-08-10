@@ -9,12 +9,22 @@ export default function ForecastDay(props) {
     let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return forecastDays[forecastDay];
   }
-  function minTemp() {
-    let minTemperature = Math.round(props.data.temp.min);
+  function evaluateMinTemp() {
+    let minTemperature = "";
+    if (props.units.tempUnits === "°F") {
+      minTemperature = Math.round(props.data.temp.min);
+    } else if (props.units.tempUnits === "°C") {
+      minTemperature = Math.round(((props.data.temp.min - 32) * 5) / 9);
+    }
     return `${minTemperature}°`;
   }
-  function maxTemp() {
-    let maxTemperature = Math.round(props.data.temp.max);
+  function evaluateMaxTemp() {
+    let maxTemperature = "";
+    if (props.units.tempUnits === "°F") {
+      maxTemperature = Math.round(props.data.temp.max);
+    } else if (props.units.tempUnits === "°C") {
+      maxTemperature = Math.round(((props.data.temp.max - 32) * 5) / 9);
+    }
     return `${maxTemperature}°`;
   }
   return (
@@ -22,8 +32,8 @@ export default function ForecastDay(props) {
       <div className="forecast-weekday">{formatDay()}</div>
       <WeatherIcon code={props.data.weather[0].icon} size={42} />
       <div>
-        <span className="min-temp">{minTemp()} </span>
-        <span className="max-temp">{maxTemp()}</span>
+        <span className="min-temp">{evaluateMinTemp()} </span>
+        <span className="max-temp">{evaluateMaxTemp()}</span>
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response);
     setReady(true);
     setForecastData(response.data.daily);
   }
@@ -24,7 +23,7 @@ export default function Forecast(props) {
           if (index <= 6) {
             return (
               <div key={index}>
-                <ForecastDay data={dailyForecastData} />
+                <ForecastDay data={dailyForecastData} units={props.units} />
               </div>
             );
           } else {

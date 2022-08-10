@@ -13,10 +13,12 @@ export default function Weather(props) {
   });
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       city: response.data.name,
       coordinates: response.data.coord,
+      country: response.data.sys.country,
       description: response.data.weather[0].description.toUpperCase(),
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
@@ -28,7 +30,6 @@ export default function Weather(props) {
   }
 
   function search() {
-    // make API call with city
     const apiKey = "59446b2366c35cbe45d81fb3e3545297";
     let apiUnits = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${apiUnits}`;
@@ -46,15 +47,12 @@ export default function Weather(props) {
       tempUnits: "°F",
       windSpeedUnits: "mph",
     });
-    console.log(displayUnits);
   }
-
   function assignMetricUnits() {
     setDisplayUnits({
       tempUnits: "°C",
       windSpeedUnits: "km/h",
     });
-    console.log(displayUnits);
   }
 
   if (weatherData.ready) {
