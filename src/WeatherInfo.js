@@ -4,24 +4,29 @@ import WeekdayAndTime from "./WeekdayAndTime";
 import WeatherIcon from "./WeatherIcon";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+
 import "./styles/WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   function evaluateTemperature() {
     let temperature = "";
+    let fahrenheitTemp = Math.round(props.data.temperature);
+    let celsiusTemp = Math.round(((props.data.temperature - 32) * 5) / 9);
     if (props.units.tempUnits === "°F") {
-      temperature = Math.round(props.data.temperature);
+      temperature = fahrenheitTemp;
     } else if (props.units.tempUnits === "°C") {
-      temperature = Math.round(((props.data.temperature - 32) * 5) / 9);
+      temperature = celsiusTemp;
     }
     return temperature;
   }
   function evaluateWindSpeed() {
     let windSpeed = "";
+    let imperialWindSpeed = Math.round(props.data.wind);
+    let metricWindSpeed = Math.round(props.data.wind * 1.609344);
     if (props.units.windSpeedUnits === "mph") {
-      windSpeed = Math.round(props.data.wind);
+      windSpeed = imperialWindSpeed;
     } else if (props.units.windSpeedUnits === "km/h") {
-      windSpeed = Math.round(props.data.wind * 1.609344);
+      windSpeed = metricWindSpeed;
     }
     return windSpeed;
   }
