@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ForecastDay from "./ForecastDay";
+import ChangeMapCoordinates from "./ChangeMapCoordinates";
 import axios from "axios";
 import "./styles/Forecast.css";
 
@@ -18,18 +19,21 @@ export default function Forecast(props) {
 
   if (ready) {
     return (
-      <div className="Forecast">
-        {forecastData.map(function (dailyForecastData, index) {
-          if (index <= 6) {
-            return (
-              <div key={index}>
-                <ForecastDay data={dailyForecastData} units={props.units} />
-              </div>
-            );
-          } else {
-            return null;
-          }
-        })}
+      <div>
+        <div className="Forecast">
+          {forecastData.map(function (dailyForecastData, index) {
+            if (index <= 6) {
+              return (
+                <div key={index}>
+                  <ForecastDay data={dailyForecastData} units={props.units} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
+        <ChangeMapCoordinates coords={props.coordinates} />
       </div>
     );
   } else {
@@ -40,6 +44,19 @@ export default function Forecast(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`;
 
     axios.get(apiUrl).then(handleResponse);
-    return "Loading...";
+    return (
+      <div className="progress">
+        <div
+          className="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow={75}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          style={{ width: "75%" }}
+        >
+          Loading...
+        </div>
+      </div>
+    );
   }
 }
