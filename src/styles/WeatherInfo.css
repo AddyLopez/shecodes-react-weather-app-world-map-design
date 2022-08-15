@@ -46,15 +46,13 @@
 .WeatherInfo div.secondary-data {
   padding-left: 35px;
   line-height: 1.5;
-  border-left: 1px dotted hsl(0, 0%, 88%);
+  border-left: 1px dotted hsl(0, 0%, 75%);
 }
 @media only screen and (max-width: 476px) {
   .WeatherInfo div.main-temperature-display-container {
     padding-right: 12px;
   }
   .WeatherInfo div.secondary-data {
-    padding-left: 0;
-    line-height: 1.5;
-    border: none;
+    padding-left: 12px;
   }
 }
