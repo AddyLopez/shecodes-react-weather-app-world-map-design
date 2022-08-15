@@ -34,11 +34,10 @@ export default function Sunrise(props) {
   ) {
     // Accounts for the half-hour by subtracting 30 minutes from the display, rounding the hour down, then incrementing the hour. Example: a display value of 4:70 a.m. would be nonsensical; instead, 4.5:40 a.m. is reformatted to 5:10 a.m.
     sunriseMinutes = sunriseMinutes - 30;
-    console.log(sunriseMinutes);
     sunriseHour = Math.floor(sunriseHour) + 1;
   }
 
-  // This code format the time to a 12-hour clock:
+  // This code formats the time to a 12-hour clock:
   if (sunriseMinutes < 10) {
     sunriseMinutes = "0" + sunriseMinutes;
   }

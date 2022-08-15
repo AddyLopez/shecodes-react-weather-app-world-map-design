@@ -15,9 +15,7 @@ export default function Sunset(props) {
   let timezoneOffsetInHours = props.timezoneOffset / 3600;
   let utcHour = sunsetDate.getUTCHours();
   let sunsetHour = utcHour + timezoneOffsetInHours;
-  console.log(sunsetHour);
   let sunsetMinutes = sunsetDate.getUTCMinutes();
-  console.log(sunsetMinutes);
   let postMeridiem = "p.m.";
 
   // This code accounts for funky timezones with half-hour values (for example, a search for Kabul, which has a UTC offset of 4.5 hours).
