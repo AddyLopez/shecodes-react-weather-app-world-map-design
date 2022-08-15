@@ -20,7 +20,7 @@ export default function WeatherFooter() {
           target="_blank"
           rel="noreferrer"
         >
-          world map design
+          world-map design
         </a>{" "}
         by{" "}
         <a
