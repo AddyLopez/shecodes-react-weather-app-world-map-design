@@ -1,5 +1,5 @@
 import React from "react";
-import Weather from "./Weather";
+import WeatherApp from "./WeatherApp";
 import { MapContainer, TileLayer, LayersControl } from "react-leaflet";
 
 import "./styles/App.css";
