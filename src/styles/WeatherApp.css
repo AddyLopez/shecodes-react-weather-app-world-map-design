@@ -1,0 +1,12 @@
+.WeatherApp {
+  background-color: hsl(205deg 100% 81% / 20%);
+  border: 1px solid hsl(0deg 0% 100% / 53%);
+  border-radius: 15px;
+  box-shadow: 3px 3px 14px hsl(0deg 0% 50% / 80%);
+  left: 50%;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 600;
+}
