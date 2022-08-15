@@ -11,19 +11,23 @@ export default function ForecastDay(props) {
   }
   function evaluateMinTemp() {
     let minTemperature = "";
+    let fahrenheitMinTemp = Math.round(props.data.temp.min);
+    let celsiusMinTemp = Math.round(((props.data.temp.min - 32) * 5) / 9);
     if (props.units.tempUnits === "°F") {
-      minTemperature = Math.round(props.data.temp.min);
+      minTemperature = fahrenheitMinTemp;
     } else if (props.units.tempUnits === "°C") {
-      minTemperature = Math.round(((props.data.temp.min - 32) * 5) / 9);
+      minTemperature = celsiusMinTemp;
     }
     return `${minTemperature}°`;
   }
   function evaluateMaxTemp() {
     let maxTemperature = "";
+    let fahrenheitMaxTemp = Math.round(props.data.temp.max);
+    let celsiusMaxTemp = Math.round(((props.data.temp.max - 32) * 5) / 9);
     if (props.units.tempUnits === "°F") {
-      maxTemperature = Math.round(props.data.temp.max);
+      maxTemperature = fahrenheitMaxTemp;
     } else if (props.units.tempUnits === "°C") {
-      maxTemperature = Math.round(((props.data.temp.max - 32) * 5) / 9);
+      maxTemperature = celsiusMaxTemp;
     }
     return `${maxTemperature}°`;
   }
