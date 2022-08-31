@@ -13,7 +13,7 @@
   padding: 20px;
 }
 .App .leaflet-control-layers-toggle {
-  background-color: white;
+  background-color: hsl(0deg 0% 100% / 90%);
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   box-shadow: 1px 1px 1px #595959;
@@ -22,14 +22,28 @@
 .App .leaflet-bar a {
   border: 1px solid #e0e0e0;
   box-shadow: 1px 1px 1px #595959;
+  background-color: hsl(0deg 0% 100% / 90%);
 }
 .App .leaflet-touch .leaflet-control-layers-expanded {
   font-size: 16px;
 }
 .App .leaflet-control-layers-base {
-  background-color: white;
+  background-color: hsl(0deg 0% 100% / 90%);
   border: 1px solid #e0e0e0;
   box-shadow: 1px 1px 1px #595959;
   border-radius: 4px;
   padding: 15px;
+}
+.App .leaflet-control-attribution {
+  background-color: hsl(0deg 0% 100% / 90%);
+  border: 1px solid hsl(0, 0%, 88%);
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px hsl(0deg 0% 35%);
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: hsl(0, 0%, 0%);
+}
+.App .leaflet-control-attribution a {
+  font-weight: bold;
 }
