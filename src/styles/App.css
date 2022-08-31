@@ -24,7 +24,7 @@
   box-shadow: 1px 1px 1px #595959;
   background-color: hsl(0deg 0% 100% / 90%);
 }
-.App .leaflet-touch .leaflet-control-layers-expanded {
+.App .leaflet-control-layers label {
   font-size: 16px;
 }
 .App .leaflet-control-layers-base {
@@ -46,4 +46,48 @@
 }
 .App .leaflet-control-attribution a {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 280px) {
+  .App .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar,
+  .App .leaflet-control-attribution,
+  .App .leaflet-control-layers-base {
+    zoom: 0.45;
+  }
+}
+@media only screen and (min-width: 282px) and (max-width: 767px) {
+  .App .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar,
+  .App .leaflet-control-attribution,
+  .App .leaflet-control-layers-base {
+    zoom: 0.55;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 820px) {
+  .App .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar,
+  .App .leaflet-control-attribution,
+  .App .leaflet-control-layers-base {
+    zoom: 0.85;
+  }
+}
+
+@media only screen and (min-width: 821px) and (max-width: 992px) {
+  .App .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar,
+  .App .leaflet-control-attribution,
+  .App .leaflet-control-layers-base {
+    zoom: 0.6;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .App .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar,
+  .App .leaflet-control-attribution,
+  .App .leaflet-control-layers-base {
+    zoom: 0.8;
+  }
 }

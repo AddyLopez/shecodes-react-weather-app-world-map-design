@@ -24,8 +24,3 @@
 .WeatherFooter a:active {
   color: hsl(13deg 94% 45%);
 }
-@media only screen and (max-width: 476px) {
-  .WeatherFooter {
-    text-align: center !important;
-  }
-}
