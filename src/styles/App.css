@@ -4,3 +4,32 @@
   height: 100vh;
   width: 100%;
 }
+.App .leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  background-color: rgba(158, 215, 255, 0.2);
+  border: 1px solid hsla(0, 0%, 100%, 0.53);
+  border-radius: 15px;
+  box-shadow: 3px 3px 14px hsl(0deg 0% 50% / 80%);
+  padding: 20px;
+}
+.App .leaflet-control-layers-toggle {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px #595959;
+  color: #666;
+}
+.App .leaflet-bar a {
+  border: 1px solid #e0e0e0;
+  box-shadow: 1px 1px 1px #595959;
+}
+.App .leaflet-touch .leaflet-control-layers-expanded {
+  font-size: 16px;
+}
+.App .leaflet-control-layers-base {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 1px 1px 1px #595959;
+  border-radius: 4px;
+  padding: 15px;
+}

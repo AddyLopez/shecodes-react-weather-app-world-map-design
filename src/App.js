@@ -31,7 +31,7 @@ export default function App() {
               maxNativeZoom={20}
             />
           </BaseLayer>
-          <BaseLayer name="Esri National Geographic map">
+          <BaseLayer name="Esri National Geographic">
             <TileLayer
               url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}.png"
               attribution="Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC"
