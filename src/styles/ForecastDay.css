@@ -10,5 +10,11 @@
 }
 
 .ForecastDay span.max-temp {
-  color: hsl(0, 0%, 35%);
+  border-left: 1px dotted hsl(0, 0%, 75%);
+  color: hsl(0, 0%, 0%);
+  padding-left: 5px;
+}
+
+.ForecastDay span.min-temp {
+  padding-right: 5px;
 }
