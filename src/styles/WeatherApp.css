@@ -12,14 +12,29 @@
 }
 @media only screen and (max-width: 280px) {
   .WeatherApp {
-    /*zoom: 0.45;*/
     transform: scale(0.45) translate(-112%, -112%);
+    -moz-transform: scale(0.45) translate(-112%, -112%);
+  }
+  @supports (zoom: 0.45) {
+    .WeatherApp {
+      transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
+      zoom: 0.45;
+    }
   }
 }
 @media only screen and (min-width: 282px) and (max-width: 767px) {
   .WeatherApp {
     /*zoom: 0.55;*/
     transform: scale(0.55) translate(-92%, -93%);
+    -moz-transform: scale(0.55) translate(-92%, -93%);
+  }
+  @supports (zoom: 0.55) {
+    .WeatherApp {
+      transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
+      zoom: 0.55;
+    }
   }
 }
 
@@ -27,6 +42,14 @@
   .WeatherApp {
     /*zoom: 0.85;*/
     transform: scale(0.85) translate(-56%, -62%);
+    -moz-transform: scale(0.85) translate(-56%, -62%);
+  }
+  @supports (zoom: 0.85) {
+    .WeatherApp {
+      transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
+      zoom: 0.85;
+    }
   }
 }
 
@@ -34,6 +57,14 @@
   .WeatherApp {
     /*zoom: 0.6;*/
     transform: scale(0.6) translate(-84%, -89%);
+    -moz-transform: scale(0.6) translate(-84%, -89%);
+  }
+  @supports (zoom: 0.6) {
+    .WeatherApp {
+      transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
+      zoom: 0.6;
+    }
   }
 }
 
@@ -41,5 +72,13 @@
   .WeatherApp {
     /*zoom: 0.8;*/
     transform: scale(0.8) translate(-59%, -63%);
+    -moz-transform: scale(0.8) translate(-59%, -63%);
+  }
+  @supports (zoom: 0.8) {
+    .WeatherApp {
+      transform: scale(1) translate(-50%, -50%);
+      -moz-transform: scale(1) translate(-50%, -50%);
+      zoom: 0.8;
+    }
   }
 }
