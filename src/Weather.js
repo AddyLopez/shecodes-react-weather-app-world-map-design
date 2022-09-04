@@ -38,6 +38,7 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    event.target.reset(); // resets the form so that the search term won't persist across renderings
     search();
   }
   function handleCityChange(event) {

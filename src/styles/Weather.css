@@ -11,7 +11,8 @@
   display: flex;
   justify-content: space-between;
 }
-.Weather .form-control {
+.Weather input.form-control {
+  font-size: 16px;
   margin-right: 10px;
   width: 310px;
 }
@@ -40,4 +41,13 @@
   background-color: hsl(13deg 94% 45%);
   --bs-btn-focus-box-shadow: 0 0 0 0.25rem hsl(13deg 94% 70%);
   border-color: hsl(13deg 94% 45%);
+}
+.Weather input.form-control::placeholder {
+  color: hsl(0, 0%, 65%);
+}
+
+@media only screen and (max-width: 768px) {
+  .Weather input.form-control {
+    font-size: 13px;
+  }
 }
