@@ -25,6 +25,8 @@ To compare my work and design with the outcome expected by the coding workshop f
 
 OpenWeatherMap API: [https://openweathermap.org/api](https://openweathermap.org/api)
 
+OpenStreetMap about page: [https://www.openstreetmap.org/about](https://www.openstreetmap.org/about)
+
 Leaflet JS home page: [https://leafletjs.com/](https://leafletjs.com/)
 
 React Leaflet documentation: [https://react-leaflet.js.org/](https://react-leaflet.js.org/)
