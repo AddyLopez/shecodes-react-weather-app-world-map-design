@@ -1,4 +1,4 @@
-# React Dictionary Application
+# React Weather Application with World Map Design
 
 **_View this project:_** [https://vermillion-conkies-d9d16e.netlify.app/](https://vermillion-conkies-d9d16e.netlify.app/)
 
