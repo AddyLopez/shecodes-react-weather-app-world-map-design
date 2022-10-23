@@ -23,8 +23,8 @@ To compare my work and design with the outcome expected by the coding workshop f
 
 ## Attributions
 
-**_OpenWeatherMap API:_** [https://openweathermap.org/api](https://openweathermap.org/api)
+OpenWeatherMap API: [https://openweathermap.org/api](https://openweathermap.org/api)
 
-**_Leaflet JS home page:_** [https://leafletjs.com/](https://leafletjs.com/)
+Leaflet JS home page: [https://leafletjs.com/](https://leafletjs.com/)
 
-**_React Leaflet documentation:_** [https://react-leaflet.js.org/](https://react-leaflet.js.org/)
+React Leaflet documentation: [https://react-leaflet.js.org/](https://react-leaflet.js.org/)
