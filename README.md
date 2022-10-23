@@ -13,7 +13,7 @@ Student project for SheCodes React coding workshop.
 Featuring multiple map tile layers with zoom capabilities, current weather and forecast data in metric or imperial units, and "fly to" animation for searches around the world!
 
 ![Preview 1 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-1.png)
-![Preview 2 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-2.png)
+![Preview 2 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-2-new.png)
 ![Preview 3 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-3.png)
 ![Preview 4 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-4.png)
 ![Preview 5 of React Weather Application with World Map Design](./src/preview/react-weather-app-preview-5.png)
