@@ -35,7 +35,7 @@ export default function Weather({ defaultCity = "Albuquerque" }) {
     const apiKey = "59446b2366c35cbe45d81fb3e3545297";
     let apiUnits = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${apiUnits}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse); // Supports 60 API calls per minute and 1,000,000 calls per month
   }
   function handleSubmit(event) {
     event.preventDefault();
