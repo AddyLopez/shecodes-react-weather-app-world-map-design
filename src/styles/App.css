@@ -18,6 +18,7 @@
   border-radius: 4px;
   box-shadow: 1px 1px 1px #595959;
   color: #666;
+  cursor: pointer;
 }
 .App .leaflet-bar a {
   border: 1px solid #e0e0e0;
@@ -46,6 +47,10 @@
 }
 .App .leaflet-control-attribution a {
   font-weight: bold;
+}
+
+.App .leaflet-control-layers-selector {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 280px) {
