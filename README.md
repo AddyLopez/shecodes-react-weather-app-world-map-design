@@ -25,7 +25,7 @@ To compare my work and design with the outcome expected by the coding workshop f
 
 ## Attributions
 
-Weather data provided by OpenWeather:
+Weather data provided by OpenWeather (license: [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)):
 ![OpenWeatherMap Logo](./src/attribution/OpenWeather-Master-Logo%20RGB.png)
 
 OpenWeather API: [https://openweathermap.org/api](https://openweathermap.org/api)
