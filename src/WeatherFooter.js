@@ -37,7 +37,7 @@ export default function WeatherFooter() {
           Data from{" "}
           <a
             href="https://openweathermap.org/accuracy-and-quality"
-            title="To Accuracy and Quality of Weather Data | OpenWeatherMap"
+            title="To Accuracy and Quality of Weather Data | OpenWeather"
             target="_blank"
             rel="noreferrer"
           >
