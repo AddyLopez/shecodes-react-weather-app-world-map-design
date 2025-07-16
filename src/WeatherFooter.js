@@ -41,7 +41,7 @@ export default function WeatherFooter() {
             target="_blank"
             rel="noreferrer"
           >
-            OpenWeatherMap
+            OpenWeather
           </a>
         </p>
       </footer>
