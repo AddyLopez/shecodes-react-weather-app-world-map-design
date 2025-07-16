@@ -28,7 +28,7 @@ To compare my work and design with the outcome expected by the coding workshop f
 Weather data provided by OpenWeather:
 ![OpenWeatherMap Logo](./src/attribution/OpenWeather-Master-Logo%20RGB.png)
 
-OpenWeatherMap API: [https://openweathermap.org/api](https://openweathermap.org/api)
+OpenWeather API: [https://openweathermap.org/api](https://openweathermap.org/api)
 
 OpenStreetMap about page: [https://www.openstreetmap.org/about](https://www.openstreetmap.org/about)
 
