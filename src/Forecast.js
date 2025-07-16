@@ -13,8 +13,9 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    console.log(response);
     setReady(true);
-    setForecastData(response.data.daily);
+    setForecastData(response.data.list);
   }
 
   if (ready) {
@@ -37,13 +38,14 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = "59446b2366c35cbe45d81fb3e3545297";
+    const apiKey = "03a6fb3a2db7f8fa83ecf42daa2cbbaa";
+    //let apiKeyOld = "59446b2366c35cbe45d81fb3e3545297";
     let apiUnits = "imperial";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`;
+    let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse); // calls to OpenWeatherMap OneCall API limited to 1000 calls per day. 429 error code triggered thereafter
     return (
       <div className="progress">
         <div

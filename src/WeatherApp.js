@@ -6,7 +6,7 @@ import "./styles/WeatherApp.css";
 export default function WeatherApp() {
   return (
     <div className="WeatherApp">
-      <Weather defaultCity="Albuquerque" />
+      <Weather />
     </div>
   );
 }

@@ -5,15 +5,16 @@ import WeatherFooter from "./WeatherFooter";
 import Forecast from "./Forecast";
 import "./styles/Weather.css";
 
-export default function Weather(props) {
+export default function Weather({ defaultCity = "Albuquerque" }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState(defaultCity);
   const [displayUnits, setDisplayUnits] = useState({
     tempUnits: "°F",
     windSpeedUnits: "mph",
   });
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       city: response.data.name,
