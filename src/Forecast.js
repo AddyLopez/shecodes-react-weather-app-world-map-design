@@ -13,7 +13,7 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    console.log(response);
+    // console.log(response);
     setReady(true);
     setForecastData(response.data.daily);
   }
@@ -38,7 +38,6 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    //const apiKey = "03a6fb3a2db7f8fa83ecf42daa2cbbaa";
     let apiKey = "59446b2366c35cbe45d81fb3e3545297";
     let apiUnits = "imperial";
     let latitude = props.coordinates.lat;
