@@ -15,7 +15,7 @@ export default function Forecast(props) {
   function handleResponse(response) {
     console.log(response);
     setReady(true);
-    setForecastData(response.data.list);
+    setForecastData(response.data.daily);
   }
 
   if (ready) {
@@ -38,8 +38,8 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    const apiKey = "03a6fb3a2db7f8fa83ecf42daa2cbbaa";
-    //let apiKeyOld = "59446b2366c35cbe45d81fb3e3545297";
+    //const apiKey = "03a6fb3a2db7f8fa83ecf42daa2cbbaa";
+    let apiKey = "59446b2366c35cbe45d81fb3e3545297";
     let apiUnits = "imperial";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
