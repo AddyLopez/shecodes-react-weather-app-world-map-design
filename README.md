@@ -6,7 +6,7 @@
 
 Student project for SheCodes React coding workshop.
 
-**_Learning objective:_** To build a weather application integrated with the OpenWeatherMap API using React. This application is capable of showing the weather for over 200,000 cities around the world. Original, experimental world-map design features integration with React Leaflet.
+**_Learning objective:_** To build a weather application integrated with the OpenWeather API using React. This application is capable of showing the weather for over 200,000 cities around the world. Original, experimental world-map design features integration with React Leaflet.
 
 ## Project Previews
 
